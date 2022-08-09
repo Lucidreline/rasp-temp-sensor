@@ -1,0 +1,11 @@
+version: "3"
+services:
+  sensor-server:
+    container_name: sensor-server
+    restart: always
+    build: .
+    ports:
+      - "3050:3050"
+    environment:
+      - FLASK_RUN_PORT=3050
+      - FLASK_APP=temperatureServer
