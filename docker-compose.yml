@@ -4,6 +4,7 @@ services:
     container_name: sensor-server
     restart: always
     build: .
+    privileged: true
     ports:
       - "3050:3050"
     environment:
